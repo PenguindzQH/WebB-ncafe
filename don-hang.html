@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn Hàng - Coffee House</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-bold" href="trang-chu.html">
+                <i class="fas fa-coffee me-2"></i> Coffee House
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="trang-chu.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trang-san-pham.html">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="don-hang.html">Đơn Hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5 pb-5">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Lịch Sử Đơn Hàng</h2>
+                <p class="text-muted">Theo dõi tất cả các đơn hàng bạn đã đặt tại Coffee House.</p>
+            </div>
+
+            <div class="row text-center mt-5">
+                <div class="col-md-4"><div class="card p-3"><h4>Tổng số đơn</h4><p class="fs-2 fw-bold text-secondary mb-0">3</p></div></div>
+                <div class="col-md-4"><div class="card p-3"><h4>Đang giao</h4><p class="fs-2 fw-bold text-secondary mb-0">1</p></div></div>
+                <div class="col-md-4"><div class="card p-3"><h4>Đã hoàn thành</h4><p class="fs-2 fw-bold text-secondary mb-0">2</p></div></div>
+            </div>
+
+            <div class="mt-5">
+                <div class="card order-list-item mb-4">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div><h5 class="mb-1">Đơn hàng #XYZ789</h5><p class="text-muted small mb-0">Ngày đặt: 14/10/2025</p></div>
+                            <div class="my-2 my-md-0"><span class="status-badge bg-warning text-dark">Đang Giao Hàng</span></div>
+                            <div><p class="mb-1">Tổng cộng: <span class="fw-bold">155.000đ</span></p>
+                                <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#orderDetailModal">Xem Chi Tiết</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card order-list-item mb-4">
+                    <div class="card-body">
+                         <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div><h5 class="mb-1">Đơn hàng #DEF456</h5><p class="text-muted small mb-0">Ngày đặt: 05/09/2025</p></div>
+                            <div class="my-2 my-md-0"><span class="status-badge bg-success text-white">Đã Hoàn Thành</span></div>
+                            <div><p class="mb-1">Tổng cộng: <span class="fw-bold">80.000đ</span></p>
+                                <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalOrderDEF456">Xem Chi Tiết</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card order-list-item mb-4">
+                    <div class="card-body">
+                         <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div><h5 class="mb-1">Đơn hàng #ABC123</h5><p class="text-muted small mb-0">Ngày đặt: 18/08/2025</p></div>
+                            <div class="my-2 my-md-0"><span class="status-badge bg-success text-white">Đã Hoàn Thành</span></div>
+                            <div><p class="mb-1">Tổng cộng: <span class="fw-bold">120.000đ</span></p>
+                                <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalOrderABC123">Xem Chi Tiết</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> <div class="modal fade" id="orderDetailModal" tabindex="-1">
+         <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white"><i class="fas fa-receipt me-2"></i>Chi Tiết Đơn Hàng #XYZ789</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="order-progress step-3 mb-4">
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-receipt"></i></div><p>Đã Đặt Hàng</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-box"></i></div><p>Đang Xử Lý</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-truck"></i></div><p>Đang Giao</p></div>
+                        <div class="progress-step"><div class="progress-icon"><i class="fas fa-check-circle"></i></div><p>Hoàn Thành</p></div>
+                    </div>
+                    <hr>
+                    <h6 class="mb-3">Các sản phẩm trong đơn hàng:</h6>
+                    <table class="table align-middle">
+                        <tbody>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=100&h=100&fit=crop" class="order-product-img rounded"></td>
+                                <td>
+                                    <p class="mb-0 fw-bold">Cappuccino Ý</p>
+                                    <small class="text-muted">Số lượng: 2</small>
+                                </td>
+                                <td class="text-end fw-bold">90.000đ</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=100&h=100&fit=crop" class="order-product-img rounded"></td>
+                                <td>
+                                    <p class="mb-0 fw-bold">Cold Brew</p>
+                                    <small class="text-muted">Số lượng: 1</small>
+                                </td>
+                                <td class="text-end fw-bold">48.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Thông Tin Giao Hàng</h6>
+                            <p class="small text-muted mb-1"><strong>Người nhận:</strong> Trần Thị B</p>
+                            <p class="small text-muted mb-1"><strong>Điện thoại:</strong> 0912 345 678</p>
+                            <p class="small text-muted mb-0"><strong>Địa chỉ:</strong> 789 Đường Lê Lợi, Quận 3, TP.HCM</p>
+                        </div>
+                        <div class="col-md-6">
+                             <h6>Tóm Tắt Đơn Hàng</h6>
+                            <div class="d-flex justify-content-between small text-muted"><p>Tạm tính:</p><p>138.000đ</p></div>
+                            <div class="d-flex justify-content-between small text-muted"><p>Phí giao hàng:</p><p>17.000đ</p></div>
+                            <hr class="my-1">
+                            <div class="d-flex justify-content-between fw-bold"><p>Tổng cộng:</p><p class="total-price">155.000đ</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalOrderDEF456" tabindex="-1">
+         <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white"><i class="fas fa-receipt me-2"></i>Chi Tiết Đơn Hàng #DEF456</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                     <div class="order-progress step-4 mb-4">
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-receipt"></i></div><p>Đã Đặt Hàng</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-box"></i></div><p>Đã Xử Lý</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-truck"></i></div><p>Đã Giao</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-check-circle"></i></div><p>Hoàn Thành</p></div>
+                    </div>
+                    <hr>
+                    <h6 class="mb-3">Các sản phẩm trong đơn hàng:</h6>
+                    <table class="table align-middle">
+                        <tbody>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=100&h=100&fit=crop" class="order-product-img rounded"></td>
+                                <td>
+                                    <p class="mb-0 fw-bold">Espresso Đậm Đà</p>
+                                    <small class="text-muted">Số lượng: 1</small>
+                                </td>
+                                <td class="text-end fw-bold">35.000đ</td>
+                            </tr>
+                             <tr>
+                                <td><img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=100&h=100&fit=crop" class="order-product-img rounded"></td>
+                                <td>
+                                    <p class="mb-0 fw-bold">Mocha Socola</p>
+                                    <small class="text-muted">Số lượng: 1</small>
+                                </td>
+                                <td class="text-end fw-bold">45.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                     <div class="row">
+                        <div class="col-md-6">
+                            <h6>Thông Tin Giao Hàng</h6>
+                            <p class="small text-muted mb-1"><strong>Người nhận:</strong> Lê Văn C</p>
+                            <p class="small text-muted mb-0"><strong>Địa chỉ:</strong> 456 Đường CMT8, Quận 10, TP.HCM</p>
+                        </div>
+                        <div class="col-md-6">
+                             <h6>Tóm Tắt Đơn Hàng</h6>
+                            <div class="d-flex justify-content-between small text-muted"><p>Tạm tính:</p><p>80.000đ</p></div>
+                            <div class="d-flex justify-content-between small text-muted"><p>Phí giao hàng:</p><p>0đ (Miễn phí)</p></div>
+                            <hr class="my-1">
+                            <div class="d-flex justify-content-between fw-bold"><p>Tổng cộng:</p><p class="total-price">80.000đ</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalOrderABC123" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white"><i class="fas fa-receipt me-2"></i>Chi Tiết Đơn Hàng #ABC123</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="order-progress step-4 mb-4">
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-receipt"></i></div><p>Đã Đặt Hàng</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-box"></i></div><p>Đã Xử Lý</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-truck"></i></div><p>Đã Giao</p></div>
+                        <div class="progress-step active"><div class="progress-icon"><i class="fas fa-check-circle"></i></div><p>Hoàn Thành</p></div>
+                    </div>
+                    <hr>
+                    <h6 class="mb-3">Các sản phẩm trong đơn hàng:</h6>
+                    <table class="table align-middle">
+                        <tbody>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=100&h=100&fit=crop" class="order-product-img rounded"></td>
+                                <td>
+                                    <p class="mb-0 fw-bold">Cà Phê Sữa Đá</p>
+                                    <small class="text-muted">Số lượng: 2</small>
+                                </td>
+                                <td class="text-end fw-bold">60.000đ</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1599750753000-3bc1a0cf6c6f?w=100&h=100&fit=crop" class="order-product-img rounded"></td>
+                                <td>
+                                    <p class="mb-0 fw-bold">Caramel Macchiato</p>
+                                    <small class="text-muted">Số lượng: 1</small>
+                                </td>
+                                <td class="text-end fw-bold">40.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                     <div class="row">
+                        <div class="col-md-6">
+                            <h6>Thông Tin Giao Hàng</h6>
+                            <p class="small text-muted mb-1"><strong>Người nhận:</strong> Nguyễn Văn A</p>
+                            <p class="small text-muted mb-0"><strong>Địa chỉ:</strong> 123 Đường Nguyễn Huệ, Quận 1, TP.HCM</p>
+                        </div>
+                        <div class="col-md-6">
+                             <h6>Tóm Tắt Đơn Hàng</h6>
+                            <div class="d-flex justify-content-between small text-muted"><p>Tạm tính:</p><p>100.000đ</p></div>
+                            <div class="d-flex justify-content-between small text-muted"><p>Phí giao hàng:</p><p>20.000đ</p></div>
+                            <hr class="my-1">
+                            <div class="d-flex justify-content-between fw-bold"><p>Tổng cộng:</p><p class="total-price">120.000đ</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-coffee me-2"></i> Coffee House</h5>
+                    <p>Mang đến cho bạn những tách cà phê ngon nhất với tình yêu và đam mê.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Liên Hệ</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Đường Nguyễn Huệ, Q1, TP.HCM</p>
+                    <p><i class="fas fa-phone me-2"></i> 0123 456 789</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Theo Dõi Chúng Tôi</h5>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Coffee House. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
